@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .container {
-    background: url(/resources/girl-fit.png) no-repeat;
+    background: url(../resources/girl-fit.png) no-repeat;
     padding: 1em;
     background-position: 65% 30%;
     background-size: 80em auto;
@@ -9,7 +9,7 @@
 }
 
 .container-2 {
-    background: url(/resources/guy-fit.png);
+    background: url(../resources/guy-fit.png);
     padding: 1em;
     background-position: 47% 00%;
     background-size: 120em auto;
@@ -82,7 +82,7 @@ ul {
     height: 100%;
     opacity: .5;
     z-index: -1;
-    background: url(/resources/footer.jpg);
+    background: url(../resources/footer.jpg);
     background-position: 50% 00%;
     background-size: 120em auto;
 }
