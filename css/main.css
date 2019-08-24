@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-
-
 .container {
   background: url(../resources/girl-fit.png) no-repeat;
   padding: 1em;
@@ -37,7 +35,27 @@ body {
   font-style: italic;
   letter-spacing: 0.3em;
   margin-bottom: 60%;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+
 }
+
+.cta:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* planbox hover animation  */
+
+.plan-box {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.plan-box:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  transform: scale(1.1);
+}
+
 
 header img {
   width: 25%;
@@ -97,27 +115,94 @@ ul {
   margin: 2em 0;
 }
 
-.footer-container a {
+
+/* section plans styles */
+
+  .plans-container {
+    color: black;
+    padding: 15%;
+
+    /*BACKGROUND Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4f4f4f+21,e2e2e2+100 */
+      background: rgb(79,79,79); /* Old browsers */
+      background: -moz-linear-gradient(top,  rgba(79,79,79,1) 21%, rgba(226,226,226,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(79,79,79,1) 21%,rgba(226,226,226,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  rgba(79,79,79,1) 21%,rgba(226,226,226,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+
+  }
+
+  .plans-container header {
+    text-align: center;
+    
+  }
+
+  .plans-container header img {
+    width: 80%;
+  }
+  .plan-box {
+    background: white;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+    margin: 15% 0;
+  }
+
+  .plans-container  .cta {
+    margin: 0;
+    background: black;
+    width: 40%;
+    display: inline-block;
+    border-radius: .4em;
+    letter-spacing: 0em;
+  }
+ 
+/* end of section plan styles */
+
+/* freetrial styles */
+
+.freetrial {
   color: white;
-  text-decoration: none;
+  margin: 5% 0;
 }
 
-.footer-container li {
-  margin: 1em 0em;
+.freetrial h2{
+  font-style: bold;
 }
 
-.footer-container img {
-  margin: 1em 0em;
-  width: 35%;
+.freetrial .cta {
+  width: 100%;
 }
 
-.address {
-  line-height: 2em;
-}
+/* end freetrial styles */
 
-.footer-container ul {
-  margin-bottom: 6em;
-}
+/* footer container styles */
+
+  .footer-container{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 15%;
+  }
+
+  .footer-container a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer-container li {
+    margin: 1em 0em;
+  }
+
+  .footer-container img {
+    
+    width: 35%;
+  }
+
+  .footer-container ul {
+    margin-bottom: 0;
+  }
+
+/* end footer container styles  */
 
 @media only screen and (min-width: 420px) {
   .container {
@@ -167,6 +252,26 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
+
+  /* section plans styles */
+
+  .plans-container header img {
+    width: 50%;
+  }
+
+  .plans-container {
+    padding: 10%;
+  }
+
+  .plan-box {
+    margin: 10% 0;
+  }
+
+  .plans-container footer ul {
+    margin-bottom: 0%;
+  }
+  /* section plans styles */
+
   .container-icon .cta {
     margin: 3em auto 3em auto;
   }
@@ -191,6 +296,52 @@ ul {
 }
 
 @media only screen and (min-width: 1024px) {
+
+  /* plans change to css grid */
+
+  .plans-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+  }
+
+  .plans-container header {
+    grid-column: span 3 / auto;
+  }
+
+  .plan-box {
+    grid-row: span 3 / auto;
+  }
+
+  .freetrial, footer {
+    grid-column: span 3 / auto;
+  }
+
+  /* plans style */
+
+  .plans-container header img{
+    width: 35%;
+  }
+
+  .freetrial {
+    text-align: center;
+    font-size: 200%;
+  }
+
+  .plans-container .freetrial .cta {
+    width: 30%;
+    font-size: 120%;
+  }
+
+  .plan-box{
+    padding: 2em .5em;
+  }
+
+  .plan-box .cta {
+    margin: 1em 0em;
+  }
+
+  
   .container-icon .icon-ul li {
     padding: 1em;
   }
@@ -213,6 +364,21 @@ ul {
 }
 
 @media only screen and (min-width: 1500px) {
+
+  /* plans style */
+
+  .plans-container header img {
+    width: 20%
+  }
+
+  .plans-container {
+    padding: 4%;
+  }
+
+  .freetrial {
+    margin-bottom: 0;
+  }
+
   .container {
     padding: 3em;
     background-size: 80em auto;
