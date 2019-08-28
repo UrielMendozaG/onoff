@@ -5,4 +5,4 @@
 ![](resources/ss.png)
 
 ## DEMO
-https://vumg.github.io/onoff
+https://urielmendozag.github.io/onoff/
