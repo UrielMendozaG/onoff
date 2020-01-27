@@ -18,7 +18,7 @@ body {
   font-family: "Montserrat";
   margin: 0;
   padding: 0;
-  font-size: 100%;
+  font-size: .9rem;
   background: black;
 }
 
@@ -37,11 +37,11 @@ body {
   margin-bottom: 60%;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
-
 }
 
 .cta:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* planbox hover animation  */
@@ -52,10 +52,10 @@ body {
 }
 
 .plan-box:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transform: scale(1.1);
 }
-
 
 header img {
   width: 25%;
@@ -115,47 +115,56 @@ ul {
   margin: 2em 0;
 }
 
-
 /* section plans styles */
 
-  .plans-container {
-    color: black;
-    padding: 15%;
+.plans-container {
+  color: black;
+  padding: 15%;
 
-    /*BACKGROUND Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4f4f4f+21,e2e2e2+100 */
-      background: rgb(79,79,79); /* Old browsers */
-      background: -moz-linear-gradient(top,  rgba(79,79,79,1) 21%, rgba(226,226,226,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top,  rgba(79,79,79,1) 21%,rgba(226,226,226,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom,  rgba(79,79,79,1) 21%,rgba(226,226,226,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4f4f4f+21,a0a0a0+100 */
+  background: #4f4f4f; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #4f4f4f 21%,
+    #a0a0a0 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #4f4f4f 21%,
+    #a0a0a0 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #4f4f4f 21%,
+    #a0a0a0 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#a0a0a0',GradientType=0 ); /* IE6-9 */
+}
 
-  }
+.plans-container header {
+  text-align: center;
+}
 
-  .plans-container header {
-    text-align: center;
-    
-  }
+.plans-container header img {
+  width: 80%;
+}
+.plan-box {
+  background: white;
+  text-align: center;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 15% 0;
+}
 
-  .plans-container header img {
-    width: 80%;
-  }
-  .plan-box {
-    background: white;
-    text-align: center;
-    padding: 1em;
-    border-radius: 1em;
-    margin: 15% 0;
-  }
+.plans-container .cta {
+  margin: 0;
+  background: black;
+  width: 40%;
+  display: inline-block;
+  border-radius: 0.4em;
+  letter-spacing: 0em;
+}
 
-  .plans-container  .cta {
-    margin: 0;
-    background: black;
-    width: 40%;
-    display: inline-block;
-    border-radius: .4em;
-    letter-spacing: 0em;
-  }
- 
 /* end of section plan styles */
 
 /* freetrial styles */
@@ -165,7 +174,7 @@ ul {
   margin: 5% 0;
 }
 
-.freetrial h2{
+.freetrial h2 {
   font-style: bold;
 }
 
@@ -177,30 +186,29 @@ ul {
 
 /* footer container styles */
 
-  .footer-container{
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    margin-top: 15%;
-  }
+.footer-container {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin-top: 15%;
+}
 
-  .footer-container a {
-    text-decoration: none;
-    color: white;
-  }
+.footer-container a {
+  text-decoration: none;
+  color: white;
+}
 
-  .footer-container li {
-    margin: 1em 0em;
-  }
+.footer-container li {
+  margin: 1em 0em;
+}
 
-  .footer-container img {
-    
-    width: 35%;
-  }
+.footer-container img {
+  width: 35%;
+}
 
-  .footer-container ul {
-    margin-bottom: 0;
-  }
+.footer-container ul {
+  margin-bottom: 0;
+}
 
 /* end footer container styles  */
 
@@ -252,7 +260,6 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
-
   /* section plans styles */
 
   .plans-container header img {
@@ -296,9 +303,12 @@ ul {
 }
 
 @media only screen and (min-width: 1024px) {
-
   /* plans change to css grid */
 
+
+  body{
+    font-size: 1rem;
+  }
   .plans-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -313,13 +323,14 @@ ul {
     grid-row: span 3 / auto;
   }
 
-  .freetrial, footer {
+  .freetrial,
+  footer {
     grid-column: span 3 / auto;
   }
 
   /* plans style */
 
-  .plans-container header img{
+  .plans-container header img {
     width: 35%;
   }
 
@@ -333,15 +344,14 @@ ul {
     font-size: 120%;
   }
 
-  .plan-box{
-    padding: 2em .5em;
+  .plan-box {
+    padding: 2em 0.5em;
   }
 
   .plan-box .cta {
     margin: 1em 0em;
   }
 
-  
   .container-icon .icon-ul li {
     padding: 1em;
   }
@@ -361,14 +371,26 @@ ul {
   .footer-container .logo {
     width: 10%;
   }
+
+  .container {
+    height: 100vh;
+  }
+
+  .container-2 {
+    display: grid;
+    height: 100vh;
+  }
+
+  .container-icon {
+    height: 100vh;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
-
   /* plans style */
 
   .plans-container header img {
-    width: 20%
+    width: 20%;
   }
 
   .plans-container {
@@ -434,6 +456,19 @@ ul {
     margin: -4em 0 0 0;
     width: 100%;
   }
+
+  .container {
+    height: 100vh;
+  }
+
+  .container-2 {
+    display: grid;
+    height: 100vh;
+  }
+
+  .container-icon {
+    height: 100vh;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -442,12 +477,26 @@ ul {
     padding: 3em;
     background-position: 65% 30%;
     background-size: 100% auto;
+    display: grid;
+    height: 100vh;
+  }
+
+  .container {
+    height: 100vh;
+  }
+
+  .container-2 {
+    display: grid;
+    height: 100vh;
+  }
+
+  .container-icon {
+    height: 100vh;
   }
 }
 
 .cta {
-    animation-duration: 0s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
+  animation-duration: 0s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
 }
-
